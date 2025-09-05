@@ -68,7 +68,7 @@ todosIguales :: [Int] -> Bool
 todosIguales (x:xs) = length (x:xs) <= 1 || x == head xs && todosIguales xs
 
 -- Ejercicio 5 --
-data AB a = Nil | Bin (AB a) a (AB a) deriving (Show)
+data AB a = Nil | Bin (AB a) a (AB a) deriving (Eq, Show)
 
 -- a --
 vacioAB :: AB a -> Bool
